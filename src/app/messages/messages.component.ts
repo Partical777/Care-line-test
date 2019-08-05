@@ -13,4 +13,10 @@ export class MessagesComponent implements OnInit {
   ngOnInit() {
   }
 
+  messageServiceClear(messageService){
+    if (confirm("Are you sure deleting this?")) {
+      messageService.clear();
+    }
+  }
+
 }

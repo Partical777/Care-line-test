@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../../hero';
 import { HeroService } from '../../hero.service';
 
+import LocalJSON from "../../../assets/data/dashboard-link.json";
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -10,6 +12,7 @@ import { HeroService } from '../../hero.service';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
+  localJson = LocalJSON;
 
   constructor(private heroService: HeroService) { }
 

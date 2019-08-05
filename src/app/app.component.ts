@@ -26,4 +26,8 @@ export class AppComponent {
     this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes);
   }
+
+  getFunction(){
+    return window.location.href !== "https://care-line-test.stackblitz.io/ci-heroes";
+  }
 }

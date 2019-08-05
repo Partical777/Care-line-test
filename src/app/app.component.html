@@ -1,8 +1,8 @@
 <h1>{{title}}</h1>
 <button (click)="messageService.removeFirstFour()">Clear Top 4 Messages</button>
 <nav>
-  <a routerLink="/ci-dashboard">Dashboard</a>
-  <a routerLink="/ci-heroes">{{heroes.length}} Heroes</a>
+  <a routerLink="/ci-dashboard">{{localJson.dashboard}}</a>
+  <a routerLink="/ci-heroes">{{heroes.length}} {{localJson.dashboard}}</a>
 </nav>
 <router-outlet></router-outlet>
 <app-messages></app-messages>

@@ -11,6 +11,9 @@ button{
   font-size: 19.2px;
   border: solid 1px rgb(250, 112, 154);
 }
+a:hover{
+  color: #e84264 !important;
+}
 h2 {
   font-size: 2em;
   margin-top: 0;

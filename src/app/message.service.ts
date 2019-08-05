@@ -8,6 +8,10 @@ export class MessageService {
     this.messages.push(message);
   }
 
+  removeFirstFour(){
+    this.messages.splice(0, 4);
+  }
+
   clear() {
     this.messages = [];
   }

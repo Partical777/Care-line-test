@@ -3,6 +3,13 @@ h1 {
   font-size: 1.2em;
   color: #999;
   margin-bottom: 0;
+  display: inline-block;
+}
+button{
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 19.2px;
+  border: solid 1px rgb(250, 112, 154);
 }
 h2 {
   font-size: 2em;

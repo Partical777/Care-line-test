@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http'
 
 import { Hero } from '../../hero';
 import { HeroService } from '../../hero.service';
 
-import LocalJSON from "../../../assets/data/dashboard-link.json";
 
 @Component({
   selector: 'app-heroes',
@@ -12,9 +12,16 @@ import LocalJSON from "../../../assets/data/dashboard-link.json";
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
-  localJson = LocalJSON;
+  localJson = {
+    "dashboard" : "",
+    "heroes" : ""
+  };
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService, http: Http) { 
+    http.get("../../../assets/data/dashboard-link.json").subscribe(response => {
+      this.localJson = response.json();
+    });
+  }
 
   ngOnInit() {
     this.getHeroes();

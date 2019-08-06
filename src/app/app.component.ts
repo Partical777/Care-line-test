@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { Http } from '@angular/http'
 
 import { Hero } from './hero';
 import { MessageService } from './message.service';
 import { HeroService } from './hero.service';
 
-import LocalJSON from "../assets/data/dashboard-link.json";
 
 @Component({
   selector: 'app-root',
@@ -14,9 +14,16 @@ import LocalJSON from "../assets/data/dashboard-link.json";
 export class AppComponent {
   title = 'Tour of Heroes';
   heroes: Hero[];
-  localJson = LocalJSON;
+  localJson = {
+    "dashboard" : "",
+    "heroes" : ""
+  };
 
-  constructor(public messageService: MessageService, private heroService: HeroService) {}
+  constructor(public messageService: MessageService, private heroService: HeroService, http: Http) {
+    http.get("../../../assets/data/dashboard-link.json").subscribe(response => {
+      this.localJson = response.json();
+    });
+  }
 
   ngOnInit() {
     this.getHeroes();

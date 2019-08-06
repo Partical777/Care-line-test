@@ -28,7 +28,15 @@ export class HeroesComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
+
+    let maxId = 0;
+    this.heroes.forEach(function(el){
+      if(el.id > maxId){
+        maxId = el.id;
+      }
+    });
+
+    this.heroService.addHero({ name, id: maxId+1 } as Hero)
       .subscribe(hero => {
         this.heroes.push(hero);
       });

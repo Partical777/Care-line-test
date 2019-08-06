@@ -72,3 +72,10 @@ button.delete {
   color: white;
 }
 
+nav a:hover {
+  color: #e84264;
+}
+
+nav a {
+  text-decoration: none;
+}

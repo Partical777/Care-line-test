@@ -11,9 +11,6 @@ button{
   font-size: 19.2px;
   border: solid 1px rgb(250, 112, 154);
 }
-a:hover{
-  color: #e84264 !important;
-}
 h2 {
   font-size: 2em;
   margin-top: 0;
@@ -31,7 +28,7 @@ nav a:visited, a:link {
   color: #607D8B;
 }
 nav a:hover {
-  color: #039be5;
+  color: #e84264;
   background-color: #CFD8DC;
 }
 nav a.active {

@@ -1,8 +1,8 @@
 <nav>
   <a routerLink="/ci-dashboard">{{localJson.dashboard}}</a>
-  <a routerLink="/ci-heroes">{{heroes.length}} {{localJson.heroes}}</a>
+  <a routerLink="/ci-heroes">{{heroes ? heroes.length : 0}} {{localJson.heroes}}</a>
 </nav>
-<h2>My {{heroes.length}} Heroes</h2>
+<h2>My {{heroes ? heroes.length : 0}} Heroes</h2>
 
 <div>
   <label>Hero name:
